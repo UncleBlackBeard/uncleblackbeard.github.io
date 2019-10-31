@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>My New Hugo Site</title>
-    <link>https://uncleblackbeard.github.io/%22/</link>
+    <link>https://uncleblackbeard.github.io/</link>
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 31 Oct 2019 17:29:44 +0800</lastBuildDate>
     
-	<atom:link href="https://uncleblackbeard.github.io/%22/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://uncleblackbeard.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>利用jsoup实现学校图书馆自习室预约系统</title>
-      <link>https://uncleblackbeard.github.io/%22/post/firstblog/</link>
+      <link>https://uncleblackbeard.github.io/post/firstblog/</link>
       <pubDate>Thu, 31 Oct 2019 17:29:44 +0800</pubDate>
       
-      <guid>https://uncleblackbeard.github.io/%22/post/firstblog/</guid>
+      <guid>https://uncleblackbeard.github.io/post/firstblog/</guid>
       <description>利用jsoup实现学校图书馆自习室预约系统 写在前面 之前在图书馆约座，总是需要半夜十二点抢座，有时候还抢不到座位，带来了一些困扰，于是便萌生了写一个app可以自动约座。想到了之前学的python爬虫可以实现，但是不会移植到手机端，电脑端又不是很方便，于是便从网上搜了一些相关资料，整合Android studio的知识，写了一个手机app，如下进行一些心路历程的汇总。
 参考博文  jsoup解析 Jsoup发送get和post请求 jsoup图文解析
 分析 学校图书馆系统每个学生卡卡号会分配一个id，图书馆大厅中有一个刷卡机器，机器可以完成签到预约，通过HTML解析可以找到每个座位分配到的id。用自己的卡号的id向图书馆的预约系统发送两条请求，一条登录请求，一条预约座位请求，即可完成一次正常的座位预约。   HTML解析部分  通过HTML解析，可以获得需要的Host、Referer、User-Agent等等，另外解析参数列表，可以发现自己的学号作为参数在其中。 再解析座位请求的参数列表，其中包括了时间和座位id。 提取有用信息。

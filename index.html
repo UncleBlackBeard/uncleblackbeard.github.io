@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+    <head>
+	<meta name="generator" content="Hugo 0.59.0" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <meta property="og:title" content="My New Hugo Site" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://uncleblackbeard.github.io/" />
+
+<meta property="og:updated_time" content="2019-10-31T17:29:44+08:00" />
+
+        <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="My New Hugo Site"/>
+<meta name="twitter:description" content=""/>
+
+        
+        <title>My New Hugo Site</title>
+
+        <link rel="icon" type="image/png" href='https://uncleblackbeard.github.io/images/favicon-16x16.png' sizes="16x16">
+        <link rel="icon" type="image/png" href='https://uncleblackbeard.github.io/images/favicon-32x32.png' sizes="32x32">  
+
+        <link href="https://fonts.googleapis.com/css?family=Oswald:400" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">      
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        
+        
+        
+        
+
+        <link rel="stylesheet" href="https://uncleblackbeard.github.io/css/bundle.min.b97f193de70a99ff0493bab9f65bdc1a4620f1d92b801069ccd3b39cd1f972f5.css" integrity="sha256-uX8ZPecKmf8Ek7q59lvcGkYg8dkrgBBpzNOznNH5cvU="  />
+
+        
+  
+    <style type="text/css">
+      .feature-image {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.15), 
+            rgba(0, 0, 0, 0.15)
+          ), url('https://uncleblackbeard.github.io/images/hero-main.jpg');
+          height: 500px;
+      }
+
+      .feature-image-text {
+          margin-top: 20px;
+      }
+
+      @media (min-width: 1200px) {
+        .feature-image {
+            background-position: 0% 30%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .feature-image {
+            height: 250px;
+            background-position: 0% 0%;
+        }
+      }
+    </style>
+  
+        
+    </head>
+    <body>
+        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark py-1 top-nav">
+            <div class="container">
+                    <a class="navbar-brand pr-2" href="https://uncleblackbeard.github.io">MY NEW HUGO SITE</a>
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="navbar-collapse collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+    <a class="nav-link active" href="https://uncleblackbeard.github.io/categories/development/">Development</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link active" href="https://uncleblackbeard.github.io/categories/golang/">Golang</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link active" href="https://uncleblackbeard.github.io/about/">About</a>
+</li>
+                    </ul>
+                    <div class="social-icons d-none d-lg-block">
+                        <a class="py-2 px-2" href='https://uncleblackbeard.github.io/index.xml'><i class="fas fa-rss"></i></a>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        
+  
+    <header class="feature-image">
+        <div class="feature-image-text white-shadow-text">
+            <h1></h1>
+<div class="intro-description d-none d-md-block"></div>
+        </div>
+    </header>
+  
+  
+
+        
+        <div class="main">
+            
+  <div class="container mt-4 mb-4 recent-posts">
+      
+      
+      
+      
+      
+      
+      <article class="post">
+        <a class="title" href="https://uncleblackbeard.github.io/post/firstblog/"><h2>利用jsoup实现学校图书馆自习室预约系统</h2></a>
+        <div class="mb-3">
+    <small>
+        <strong>By </strong>
+        | <i class="far fa-calendar-alt"></i>&nbsp;Oct 31, 2019&nbsp;
+        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> 
+    </small>
+</div>
+        <div>
+            利用jsoup实现学校图书馆自习室预约系统 写在前面 之前在图书馆约座，总是需要半夜十二点抢座，有时候还抢不到座位，带来了一些困扰，于是便萌生了写一个app可以自动约座。想到了之前学的python爬虫可以实现，但是不会移植到手机端，电脑端又不是很方便，于是便从网上搜了一些相关资料，整合Android studio的知识，写了一个手机app，如下进行一些心路历程的汇总。
+参考博文  jsoup解析 Jsoup发送get和post请求 jsoup图文解析
+分析 学校图书馆系统每个学生卡卡号会分配一个id，图书馆大厅中有一个刷卡机器，机器可以完成签到预约，通过HTML解析可以找到每个座位分配到的id。用自己的卡号的id向图书馆的预约系统发送两条请求，一条登录请求，一条预约座位请求，即可完成一次正常的座位预约。   HTML解析部分  通过HTML解析，可以获得需要的Host、Referer、User-Agent等等，另外解析参数列表，可以发现自己的学号作为参数在其中。 再解析座位请求的参数列表，其中包括了时间和座位id。 提取有用信息。
+Android Studio部分 程序示范 if (result1==null) result1=&quot;begin&quot;; if (result2==null) result2=&quot;begin&quot;; while (!result1.equals(&quot;欢迎使用【************】&quot;)) { try { /* //登录部分 //获取当前时间*/ Connection conn = Jsoup.connect(&quot;**************&quot;).timeout(30000); conn.header(&quot;Host&quot;, &quot;*************&quot;); conn.header(&quot;Referer&quot;, &quot;**************&quot;); conn.header(&quot;User-Agent&quot;, &quot;Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36&quot;); Map&lt;String, String&gt; map = new HashMap&lt;String, String&gt;(); map.put(&quot;cardno&quot;, &quot;************&quot;); Connection.Response response = conn.ignoreContentType(true).method(Connection.Method.POST).data(map).execute(); cookies = response.
+        </div>
+        <div>
+            <a href="https://uncleblackbeard.github.io/post/firstblog/" class="btn btn-outline-secondary" role="button">Continue Reading...</a>
+        </div>
+      </article>
+    
+    <div class="d-flex justify-content-center">
+        
+
+
+    </div>
+  </div>
+  <div class="sidebar d-print-none d-none d-xl-block">
+    
+        <h2>Top Posts</h2>
+    
+    
+    <h2 class="mt-4">Recent Posts</h2>
+    <nav class="nav flex-column">
+        
+        <a href="https://uncleblackbeard.github.io/post/firstblog/" class="nav-link">利用jsoup实现学校图书馆自习室预约系统</a>
+        
+    </nav>
+    
+    <h2 class="mt-4 text-capitalize">categories</h2>
+    <nav class="nav flex-column">
+        
+    </nav>
+    
+    <h2 class="mt-4 text-capitalize">tags</h2>
+    <nav class="nav flex-column">
+        
+    </nav>
+    
+</div>
+
+        </div>
+
+        <footer class="mt-auto footer d-print-none">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-md-4 col-xl-3">
+                        <h5></h5>
+
+                    </div>
+                    <div class="col-md-4 col-xl-3">
+                        <h5>Disclaimer</h5>
+Opinions expressed here are my own and may not reflect those of the company I work for, or the people I work with.
+                    </div>
+                    <div class="col-md-4 col-xl-3">
+                        <h5>About This Site</h5>
+This blog was created using the <a href="https://gohugo.io/">Hugo</a> static site generator, using
+<a href="https://getbootstrap.com/">Bootstrap</a>, using the Silhouette Hugo theme, created by
+<a href='https://www.mattbutton.com'>Matt Button</a>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="d-flex justify-content-center icons">
+                    <a class="py-2 px-2" href='https://uncleblackbeard.github.io/index.xml'><i class="fas fa-rss"></i></a>
+
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+        
+    </body>
+</html>
